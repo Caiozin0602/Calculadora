@@ -1,0 +1,114 @@
+/*Fonts*/
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+/*Fonts*/
+/*Estrutura Basica*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Micro 5", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+/*Fundo com gradiente e ajustar os itens no meio exato da pagina*/
+body{
+    background: #FFF9A7;
+    background: linear-gradient(90deg, rgba(255, 249, 167, 1) 0%, rgba(237, 232, 208, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/*Cor de fundo e alinhar os botoes em coluna com flex-direction*/
+.calculadora{
+    background-color: rgba(0, 0, 0, 0.945);
+    padding: 25px;
+    border-radius: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 320px;
+    box-shadow: 0px 22px 28px 3px rgba(0,0,0,0.67);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/*Ajusta a tela para preencher toda a div da calculadora e o texto vir apartir da direita*/
+#tela{
+    width: 100%;
+    height: 60px;
+    font-size: 46px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    text-align: right;
+    box-shadow: inset 2px 4px rgba(7, 3, 0, 0.76);
+}
+/*Coloca espaçamento entre os botoes e coloca os mesmos em coluna*/
+.botoes{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/*Aplica um espaçamento especifico entre botoes*/
+.linha-botoes{
+    display: flex;
+    gap: 15px;
+}
+/*Aumenta o tamanho dos botoes e faz com que os mesmos sejam "clicaveis"*/
+button{
+    padding: 20px;
+    font-size: 30px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(78, 78, 78);
+    color: white;
+    /*box-shadow: 6px 6px 5px 8px #1b1b1b;*/
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+/*Quando cursor em cima, altera a cor do botao e faz ele levantar verticalmente */
+button:hover{
+    background-color: rgb(39, 39, 39);
+    transform: translateY(-2px);
+}
+/*Quando ativo, muda o tamanho do elemento*/
+button:active{
+    transform: scale(0.98)
+}
+/*Muda a cor de botoes operadores*/
+.operadores{
+    background-color: rgb(199, 133, 0);
+}
+/*Quando em cima de botoes operadores, altera a cor*/
+.operadores:hover{
+    background-color: rgb(153, 102, 0);
+}
+/*Muda o fundo do botao de excluir tudo*/
+.botao-limpar{
+    background-color: rgb(155, 0, 0);
+}
+/*Quando em cima, muda a cor*/
+.botao-limpar:hover{
+    background-color: rgb(110, 0, 0);
+}
+/*Muda o fundo do botao delete (igual aos operadores, mas separado para mudanças futuras*/
+.delete{
+    background-color: rgb(199, 133, 0);
+}
+/*Muda a cor quando mouse por cima*/
+.delete:hover{
+    background-color: rgb(153, 102, 0);
+}
+/*Altera o tamanho do flex, fazendo ele ocupar mais espaço, como numa grade de 4x1, ele ocupa 2x e 2x, aumentando o flex... 3x 1x*/
+.botao-zero{
+    flex: 10;
+}
+.botao-igual{
+    background-color: rgb(199, 133, 0);
+}
+.botao-igual:hover{
+    background-color: rgb(153, 102, 0);
+}
